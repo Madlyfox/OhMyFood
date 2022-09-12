@@ -1,0 +1,58 @@
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: loaded 5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  .circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #99e2d0;
+    left: 15%;
+    transform-origin: 50%;
+    animation: circle 0.5s alternate infinite ease;
+  }
+
+  :nth-child(2) {
+    left: 45%;
+    animation-delay: 0.2s;
+  }
+  :nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: 0.3s;
+  }
+  h1 {
+    position: absolute;
+    height: 40px;
+    margin: auto;
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+    span {
+      position: absolute;
+      top: 75px;
+      letter-spacing: 12px;
+      display: none;
+      color: black;
+      left: 15%;
+    }
+    &::after {
+      animation: txt 1s infinite;
+      content: "";
+    }
+  }
+}

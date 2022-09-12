@@ -1,0 +1,14 @@
+.nav {
+  height: 8%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+  img {
+    width: 200px;
+  }
+}

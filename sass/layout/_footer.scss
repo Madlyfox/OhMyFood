@@ -1,0 +1,27 @@
+footer {
+  width: 100%;
+  display: flex;
+  background-color: #353535;
+  flex-flow: column;
+
+  ul {
+    li {
+      list-style: none;
+      padding: 1% 0;
+      p {
+        font-family: "Shrikhand";
+        color: white;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+          color: #9356dc;
+        }
+        i {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

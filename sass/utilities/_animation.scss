@@ -1,0 +1,56 @@
+@keyframes circle {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes txt {
+  0% {
+    content: "LOADING";
+  }
+  40% {
+    content: "LOADING.";
+  }
+
+  60% {
+    content: "LOADING..";
+  }
+  100% {
+    content: "LOADING...";
+  }
+}
+
+@keyframes loaded {
+  0% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes contentLoaded {
+  0% {
+    opacity: 0%;
+  }
+  70% {
+    opacity: 1%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
