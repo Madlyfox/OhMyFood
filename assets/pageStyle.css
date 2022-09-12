@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* p,
+* h2,
+* h3 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+
+* h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+}
+
+html body header {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+html body header img {
+  width: 200px;
+}
+
+html body header a {
+  position: absolute;
+  left: 20px;
+  color: black;
+}
+
+html body header a:hover {
+  color: #9356dc;
+}
+
+html body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+html body main .banner {
+  height: 20%;
+  position: relative;
+}
+
+html body main .banner img {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html body main .content {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #f0f0f0;
+  margin-top: -70px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+html body main .content .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  padding: 3% 3% 0 3%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body main .content .head h1 {
+  font-size: 30px;
+  font-weight: 100;
+  font-family: "Shrikhand";
+  margin: 0;
+}
+
+html body main .content .head i {
+  color: #353535;
+  font-size: 30px;
+}
+
+html body main .content .head i:hover {
+  font-weight: bold;
+  line-height: 1;
+  color: #9356dc;
+}
+
+@-webkit-keyframes rise {
+  from {
+    margin-top: 90%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    margin-top: 90%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0%;
+    opacity: 1;
+  }
+}
+
+html body main .content section {
+  height: auto;
+  width: 27%;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-animation: rise 3s;
+          animation: rise 3s;
+}
+
+html body main .content section span {
+  border-bottom: #99e2d0 2px solid;
+  width: 60px;
+  padding-bottom: 5px;
+}
+
+html body main .content section .title {
+  width: 100%;
+}
+
+html body main .content section .cardHolder {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin-top: 5%;
+}
+
+html body main .content section .cardHolder .card {
+  width: auto;
+  margin: 3% 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  text-align: left;
+  background-color: white;
+  border: none;
+  -webkit-box-shadow: 0px 10px 10px lightgrey;
+          box-shadow: 0px 10px 10px lightgrey;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+html body main .content section .cardHolder .card .cardContent {
+  width: 100%;
+  padding: 3%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+html body main .content section .cardHolder .card .cardContent .title {
+  width: 100%;
+  margin-top: 0;
+}
+
+html body main .content section .cardHolder .card .cardContent .price {
+  justify-self: flex-end;
+}
+
+html body main .content section .cardHolder .card .selected {
+  width: 0;
+  z-index: 2;
+  background-color: #99e2d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+html body main .content section .cardHolder .card .selected i {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+  scale: 2;
+}
+
+html body main .content section .cardHolder .card:hover .cardContent {
+  width: 80%;
+}
+
+html body main .content section .cardHolder .card:hover .selected {
+  width: 14%;
+}
+
+html body main .content section .cardHolder .card:hover .selected i {
+  -webkit-animation: selected 1s;
+          animation: selected 1s;
+}
+
+@-webkit-keyframes selected {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes selected {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+html body main .commander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+html body main .commander button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  -webkit-box-shadow: 0px 7px 10px lightgrey;
+          box-shadow: 0px 7px 10px lightgrey;
+  font-size: 18px;
+  font-weight: 800;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(#9356dc), to(#ff79da));
+  background-image: linear-gradient(to right, #ff79da, #9356dc, #ff79da);
+  border: none;
+  background-size: 300% 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body main .commander button:hover {
+  background-position: 100% 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #353535;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+html body footer ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+html body footer ul li p {
+  font-family: "Shrikhand";
+  margin: 0;
+  color: white;
+}
+
+html body footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+html body footer ul li a:hover {
+  color: #9356dc;
+}
+
+html body footer ul li a i {
+  width: 20px;
+}
+
+@media (max-width: 950px) {
+  html body main .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html body main .content .head {
+    padding: 5% 5% 0 5%;
+  }
+  html body main .content span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 5% 0;
+  }
+  html body main .content span h1 {
+    font-size: 27px;
+  }
+  html body main .content section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 3% 3% 0 3%;
+    width: 44%;
+  }
+  html body main .content section span {
+    padding: 5px 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html body main .content section .cardHolder {
+    width: 100%;
+  }
+  html body main .content .commander {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body main .content span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 5% 0;
+  }
+  html body main .content span h1 {
+    font-size: 20px;
+  }
+  html body main .content section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+  }
+  html body main .content section .cardHolder {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=pageStyle.css.map */
