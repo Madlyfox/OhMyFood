@@ -1,0 +1,152 @@
+@use "./components/page-nav";
+@use "./layout/page-banner";
+@use "./layout/page-card-holder";
+@use "./components/button";
+@use "./layout/footer";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+* {
+  p,
+  h2,
+  h3 {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  .content {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #f0f0f0;
+    margin-top: -70px;
+    position: relative;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    .head {
+      display: flex;
+      width: 100%;
+      gap: 5%;
+      padding: 3% 3% 0 3%;
+      justify-content: space-between;
+      h1 {
+        font-size: 30px;
+        font-weight: 100;
+        font-family: "Shrikhand";
+        margin: 0;
+      }
+
+      i {
+        color: #353535;
+        font-size: 30px;
+
+        &:hover {
+          font-weight: bold;
+          line-height: 1;
+          color: #9356dc;
+        }
+      }
+    }
+
+    section {
+      height: auto;
+      width: 27%;
+      padding: 3%;
+      display: flex;
+      flex-flow: column;
+      animation: rise 3s;
+      span {
+        border-bottom: #99e2d0 2px solid;
+        width: 60px;
+        padding-bottom: 5px;
+      }
+      .title {
+        width: 100%;
+      }
+    }
+  }
+  .commander {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    body {
+      main {
+        .content {
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          .head {
+            padding: 5% 5% 0 5%;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-evenly;
+            padding: 5% 0;
+            h1 {
+              font-size: 27px;
+            }
+          }
+          section {
+            align-items: flex-start;
+            flex-flow: row wrap;
+            padding: 3% 3% 0 3%;
+            width: 44%;
+            span {
+              padding: 5px 0;
+              justify-content: flex-start;
+            }
+          }
+          .commander {
+            justify-content: center;
+            align-items: center;
+            margin: 5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    body {
+      main {
+        .content {
+          span {
+            display: flex;
+            align-items: center;
+            width: 60px;
+            justify-content: space-evenly;
+            padding: 5% 0;
+            h1 {
+              font-size: 20px;
+            }
+          }
+          section {
+            align-items: flex-start;
+            flex-flow: column;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

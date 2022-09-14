@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+header {
+  height: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+header img {
+  width: 200px;
+}
+header a {
+  position: absolute;
+  left: 20px;
+  color: black;
+}
+header a:hover {
+  color: #9356dc;
+}
+
+.banner {
+  height: 20%;
+  position: relative;
+}
+.banner img {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.card {
+  width: auto;
+  margin: 3% 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  text-align: left;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 10px 10px lightgrey;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .cardContent {
+  width: 100%;
+  padding: 3%;
+  z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.card .cardContent .title {
+  width: 100%;
+  margin-top: 0;
+}
+.card .cardContent .price {
+  justify-self: flex-end;
+}
+.card .selected {
+  width: 0;
+  z-index: 2;
+  background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.card .selected i {
+  color: white;
+  transition: 1s;
+  scale: 2;
+}
+.card:hover .cardContent {
+  width: 80%;
+}
+.card:hover .selected {
+  width: 14%;
+}
+.card:hover .selected i {
+  animation: selected 1s;
+}
+
+.cardHolder {
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  margin-top: 5%;
+}
+
+@media (max-width: 950px) {
+  .cardHolder {
+    width: 100%;
+  }
+}
+.button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  box-shadow: 0px 7px 10px lightgrey;
+  font-size: 13px;
+  font-weight: 800;
+  background-image: linear-gradient(to right, #ff79da, #9356dc, #ff79da);
+  border: none;
+  background-size: 300% 100%;
+  transition: all 0.4s ease-in-out;
+}
+.button:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  background-color: #353535;
+  flex-flow: column;
+}
+footer ul li {
+  list-style: none;
+  padding: 1% 0;
+}
+footer ul li p {
+  font-family: "Shrikhand";
+  color: white;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #9356dc;
+}
+footer ul li a i {
+  width: 20px;
+}
+
+* p,
+* h2,
+* h3 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+* h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+}
+main .content {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #f0f0f0;
+  margin-top: -70px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+}
+main .content .head {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  padding: 3% 3% 0 3%;
+  justify-content: space-between;
+}
+main .content .head h1 {
+  font-size: 30px;
+  font-weight: 100;
+  font-family: "Shrikhand";
+  margin: 0;
+}
+main .content .head i {
+  color: #353535;
+  font-size: 30px;
+}
+main .content .head i:hover {
+  font-weight: bold;
+  line-height: 1;
+  color: #9356dc;
+}
+main .content section {
+  height: auto;
+  width: 27%;
+  padding: 3%;
+  display: flex;
+  flex-flow: column;
+  animation: rise 3s;
+}
+main .content section span {
+  border-bottom: #99e2d0 2px solid;
+  width: 60px;
+  padding-bottom: 5px;
+}
+main .content section .title {
+  width: 100%;
+}
+main .commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+@media (max-width: 950px) {
+  html body main .content {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  html body main .content .head {
+    padding: 5% 5% 0 5%;
+  }
+  html body main .content span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 5% 0;
+  }
+  html body main .content span h1 {
+    font-size: 27px;
+  }
+  html body main .content section {
+    align-items: flex-start;
+    flex-flow: row wrap;
+    padding: 3% 3% 0 3%;
+    width: 44%;
+  }
+  html body main .content section span {
+    padding: 5px 0;
+    justify-content: flex-start;
+  }
+  html body main .content .commander {
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+  }
+}
+@media (max-width: 768px) {
+  html body main .content span {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    justify-content: space-evenly;
+    padding: 5% 0;
+  }
+  html body main .content span h1 {
+    font-size: 20px;
+  }
+  html body main .content section {
+    align-items: flex-start;
+    flex-flow: column;
+    width: 100%;
+  }
+}/*# sourceMappingURL=page.css.map */

@@ -1,0 +1,14 @@
+@use "../components/page-card";
+
+.cardHolder {
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  margin-top: 5%;
+}
+
+@media (max-width: 950px) {
+  .cardHolder {
+    width: 100%;
+  }
+}
