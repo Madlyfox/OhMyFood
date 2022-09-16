@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .nav {
-  height: 8%;
+  height: 50px;
   display: flex;
-  position: fixed;
   top: 0;
   width: 100%;
   justify-content: center;
@@ -50,6 +49,12 @@
   padding: 10px 0;
   background-color: rgb(234, 234, 234);
   gap: 10px;
+}
+.banner .position i {
+  color: black;
+}
+.banner .position i:hover {
+  color: #9356dc;
 }
 .banner .position input {
   background-color: rgb(234, 234, 234);
@@ -151,7 +156,7 @@
   width: 100%;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 10px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -159,6 +164,11 @@ a {
   text-decoration: none;
   position: relative;
   padding: 3%;
+  transition: ease-in-out 0.3s;
+}
+a:hover {
+  transform: scale(1.02);
+  z-index: 1;
 }
 a span {
   position: absolute;
@@ -169,6 +179,7 @@ a span {
   margin-top: 3%;
   text-align: center;
   color: #2ba083;
+  z-index: 5;
 }
 a span p {
   margin: 0;
@@ -179,10 +190,6 @@ a .card {
   flex-flow: row wrap;
   box-shadow: 0px 10px 10px lightgrey;
   border-radius: 20px;
-}
-a .card:hover {
-  transition: ease 0.3s;
-  box-shadow: 0px 15px 10px #f5edff;
 }
 a .card img {
   width: 100%;
@@ -202,6 +209,9 @@ a .card .cardContent .text {
   display: flex;
   flex-direction: column;
   color: black;
+}
+a .card .cardContent .text:hover {
+  color: #9356dc;
 }
 a .card .cardContent .text .title {
   font-weight: bold;
@@ -226,6 +236,7 @@ a .card .cardContent i:hover {
 @media (max-width: 600px) {
   a {
     width: 100%;
+    padding: 0;
   }
   a span {
     right: 5%;
@@ -262,6 +273,9 @@ a .card .cardContent i:hover {
   }
 }
 @media (max-width: 600px) {
+  .cardHolder {
+    margin-bottom: 10px;
+  }
   .cardHolder .container {
     flex-flow: column;
   }
@@ -445,7 +459,6 @@ main {
 main .content {
   animation: contentLoaded 5s;
   margin-inline: auto;
-  margin-top: 70px;
 }
 main .content section {
   padding: 0 3%;

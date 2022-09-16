@@ -16,6 +16,12 @@
     padding: 10px 0;
     background-color: rgb(234, 234, 234);
     gap: 10px;
+    i {
+      color: black;
+      &:hover {
+        color: #9356dc;
+      }
+    }
     input {
       background-color: rgb(234, 234, 234);
       border: none;
