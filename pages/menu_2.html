@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/pageStyle.css" />
+    <link rel="stylesheet" href="../css/page.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -25,21 +25,21 @@
   <body>
     <header>
       <a href="../index.html"> <i class="fa-solid fa-arrow-left fa-xl"></i></a>
-      <img src="../assets/images/ohmyfood@2x.svg" alt="" />
+      <img src="../assets/images/ohmyfood@2x.svg" alt="OhMyFood" />
     </header>
     <main>
       <div class="banner">
-        <img src="../assets/images/img2.jpg" alt="" />
+        <img src="../assets/images/img2.jpg" alt="La note enchentée" />
       </div>
       <div class="content">
         <div class="head">
-          <h1>La note enchantée</h1>
+          <h1>La note enchentée</h1>
           <i class="far fa-heart"></i>
         </div>
         <section>
-          <span><h2>ENTREES</h2></span>
+          <span>ENTREES</span>
           <div class="cardHolder">
-            <button class="card">
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Ravioles de foie gras</h3>
                 <p>Accompagnés de leur crème à la truffe</p>
@@ -48,8 +48,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Caviar osciètre</h3>
                 <p>Sur blini à la farine de blé noir</p>
@@ -58,8 +58,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Homard et espuma de potiron</h3>
                 <p>Mariné aux zestes d'orange</p>
@@ -68,8 +68,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Foie gras de canard cuit entier</h3>
                 <p>Confiture de figue et pain toasté</p>
@@ -78,13 +78,13 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
+            </a>
           </div>
         </section>
         <section>
-          <span><h2>PLATS</h2></span>
+          <span>PLATS</span>
           <div class="cardHolder">
-            <button class="card" type="">
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Noix de coquilles Saint-Jacques</h3>
                 <p>Sur lit de purée de céleri-rave</p>
@@ -93,8 +93,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Langoustine poêlée</h3>
                 <p>Purée de patate douce</p>
@@ -103,8 +103,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Mijoté de queue de boeuf</h3>
                 <p>Et riz sauvage aux zestes de citron</p>
@@ -113,13 +113,13 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
+            </a>
           </div>
         </section>
         <section>
-          <span><h2>DESSERTS</h2></span>
+          <span>DESSERTS</span>
           <div class="cardHolder">
-            <button class="card">
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Macaron noisette et chocolat</h3>
                 <p>Glace au caramel brun et sel de Guérande</p>
@@ -128,8 +128,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Baba au rhum revisité</h3>
                 <p>Avec son coulis de citron</p>
@@ -138,8 +138,8 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
-            <button class="card">
+            </a>
+            <a href="#" class="card">
               <div class="cardContent">
                 <h3 class="title">Tarte au citron meringuée</h3>
                 <p>Déstructurée</p>
@@ -148,35 +148,32 @@
               <div class="selected">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
-            </button>
+            </a>
           </div>
         </section>
-        <div class="commander"><button>Commander</button></div>
+        <div class="commander"><button class="button">Commander</button></div>
       </div>
-      
     </main>
     <footer>
-          <ul>
-            <li><p>ohmyfood</p></li>
-            <li>
-              <a href="#"><i class="fa-solid fa-utensils"></i>
-              Proposer un restaurant</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-handshake-angle"></i></i>
-              Devenir partenaire
-            </li></a>
-            <li>
-              <a href="#">
-              Mention légales
-            </a>
-            </li>
-            <li>
-              <a href="#">
-              Contact
-            </a>
-            </li>
-          </ul>
-      </footer>
+      <ul>
+        <li><p>ohmyfood</p></li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a
+          >
+        </li>
+        <li>
+          <a href="#"> Mention légales </a>
+        </li>
+        <li>
+          <a href="#"> Contact </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

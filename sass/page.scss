@@ -4,6 +4,7 @@
 @use "./components/button";
 @use "./layout/footer";
 @use "./utilities/animation";
+@use "./utilities/font";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -46,6 +47,7 @@ main {
       gap: 5%;
       padding: 3% 3% 0 3%;
       justify-content: space-between;
+      align-items: center;
       h1 {
         font-size: 30px;
         font-weight: 100;
@@ -74,11 +76,15 @@ main {
       animation: rise 3s;
       span {
         border-bottom: #99e2d0 2px solid;
-        width: 60px;
+        width: 40px;
         padding-bottom: 5px;
       }
       .title {
         width: 100%;
+      }
+      a {
+        color: black;
+        text-decoration: none;
       }
     }
   }
@@ -104,12 +110,9 @@ main {
           span {
             display: flex;
             align-items: center;
-            width: 100%;
+
             justify-content: space-evenly;
             padding: 5% 0;
-            h1 {
-              font-size: 27px;
-            }
           }
           section {
             align-items: flex-start;
@@ -137,16 +140,6 @@ main {
     body {
       main {
         .content {
-          span {
-            display: flex;
-            align-items: center;
-            width: 60px;
-            justify-content: space-evenly;
-            padding: 5% 0;
-            h1 {
-              font-size: 20px;
-            }
-          }
           section {
             align-items: flex-start;
             flex-flow: column;
