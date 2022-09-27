@@ -221,7 +221,7 @@ a .card .cardContent i {
   opacity: 1;
 }
 a .card .cardContent i:hover {
-  animation: like 0.1s;
+  animation: like 0.4s;
   animation-fill-mode: forwards;
 }
 

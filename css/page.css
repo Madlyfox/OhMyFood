@@ -93,7 +93,6 @@ header a:hover {
 .card .selected i {
   color: white;
   transition: 1s;
-  scale: 2;
 }
 .card:hover .cardContent {
   width: 80%;
