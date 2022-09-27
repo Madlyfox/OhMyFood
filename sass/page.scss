@@ -10,6 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 * {
+  text-overflow: ellipsis;
   p,
   h2,
   h3 {
@@ -37,7 +38,7 @@ main {
     background-color: #f0f0f0;
     margin-top: -70px;
     position: relative;
-
+    padding: 3%;
     display: flex;
     flex-flow: row wrap;
 
@@ -56,13 +57,17 @@ main {
       }
 
       i {
-        color: #353535;
         font-size: 30px;
+        -webkit-text-stroke: 1px black;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        line-height: 1;
+        opacity: 1;
 
         &:hover {
-          font-weight: bold;
-          line-height: 1;
-          color: #9356dc;
+          animation: like 0.1s;
+          animation-fill-mode: forwards;
         }
       }
     }
@@ -70,7 +75,6 @@ main {
     section {
       height: auto;
       width: 27%;
-      padding: 3%;
       display: flex;
       flex-flow: column;
       animation: rise 3s;
@@ -117,7 +121,6 @@ main {
           section {
             align-items: flex-start;
             flex-flow: row wrap;
-            padding: 3% 3% 0 3%;
             width: 44%;
             span {
               padding: 5px 0;

@@ -72,3 +72,35 @@
     transform: rotate(360deg);
   }
 }
+@keyframes like {
+  0% {
+    background: #f0f0f0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  30% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #f0f0f0, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  50% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  70% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #9356dc, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  100% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #f0f0f0;
+  }
+}

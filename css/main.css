@@ -30,7 +30,6 @@
 }
 .button:hover {
   background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
 }
 
 .banner {
@@ -175,12 +174,10 @@ a span {
   width: 100px;
   margin-top: 3%;
   text-align: center;
-  color: #2ba083;
+  color: #0d8f6f;
   z-index: 5;
-}
-a span p {
-  margin: 0;
-  padding: 5%;
+  border-radius: 4px;
+  padding: 7px 1px;
 }
 a .card {
   display: flex;
@@ -217,12 +214,16 @@ a .card .cardContent .text p {
   margin: 5px 5px 5px 5px;
 }
 a .card .cardContent i {
-  color: #353535;
-}
-a .card .cardContent i:hover {
+  -webkit-text-stroke: 1px black;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
   line-height: 1;
-  color: #9356dc;
+  opacity: 1;
+}
+a .card .cardContent i:hover {
+  animation: like 0.1s;
+  animation-fill-mode: forwards;
 }
 
 @media (max-width: 950px) {
@@ -435,6 +436,38 @@ footer ul li a i {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes like {
+  0% {
+    background: #f0f0f0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  30% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #f0f0f0, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  50% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  70% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #9356dc, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none;
+  }
+  100% {
+    background: -webkit-linear-gradient(90deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #f0f0f0;
   }
 }
 * {

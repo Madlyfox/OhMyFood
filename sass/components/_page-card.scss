@@ -20,18 +20,33 @@
   overflow: hidden;
   .cardContent {
     width: 100%;
-    padding: 3%;
+    padding: 15px;
     z-index: 2;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: space-between;
     transition: 0.5s;
+
     .title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       width: 100%;
       margin-top: 0;
     }
+    .subContent {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row;
+    }
     .price {
       justify-self: flex-end;
+      padding-left: 10px;
+    }
+    .desc {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   .selected {
@@ -52,12 +67,19 @@
   &:hover {
     .cardContent {
       width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .selected {
-      width: 14%;
+      width: 20%;
       i {
         animation: selected 1s;
       }
     }
+  }
+}
+@media (max-width: 400px) {
+  .desc {
+    width: 250px;
   }
 }
