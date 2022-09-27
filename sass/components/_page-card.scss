@@ -1,5 +1,4 @@
 .card {
-  width: auto;
   margin: 3% 0;
   padding: 0;
 
@@ -42,6 +41,7 @@
     .price {
       justify-self: flex-end;
       padding-left: 10px;
+      font-weight: bold;
     }
     .desc {
       white-space: nowrap;
@@ -76,6 +76,11 @@
         animation: selected 1s;
       }
     }
+  }
+}
+@media (max-width: 950px) {
+  .desc {
+    width: 250px;
   }
 }
 @media (max-width: 400px) {

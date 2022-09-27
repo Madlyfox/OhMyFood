@@ -34,7 +34,6 @@ header a:hover {
 }
 
 .card {
-  width: auto;
   margin: 3% 0;
   padding: 0;
   display: flex;
@@ -75,6 +74,7 @@ header a:hover {
 .card .cardContent .price {
   justify-self: flex-end;
   padding-left: 10px;
+  font-weight: bold;
 }
 .card .cardContent .desc {
   white-space: nowrap;
@@ -107,6 +107,11 @@ header a:hover {
   animation: selected 1s;
 }
 
+@media (max-width: 950px) {
+  .desc {
+    width: 250px;
+  }
+}
 @media (max-width: 400px) {
   .desc {
     width: 250px;
@@ -130,16 +135,15 @@ header a:hover {
   border-radius: 25px;
   border: none;
   color: white;
-  box-shadow: 0px 7px 10px lightgrey;
+  box-shadow: 0px 7px 10px rgb(184, 184, 184);
   font-size: 13px;
   font-weight: 800;
-  background-image: linear-gradient(to right, #ff79da, #9356dc, #ff79da);
+  background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
-  background-size: 300% 100%;
-  transition: all 0.4s ease-in-out;
 }
 .button:hover {
-  background-position: 100% 0;
+  animation: 0.1s btn-hover ease;
+  animation-fill-mode: forwards;
 }
 
 footer {
@@ -270,6 +274,20 @@ footer ul li a i {
     -webkit-text-stroke: 1px #f0f0f0;
   }
 }
+@keyframes btn-hover {
+  0% {
+    background-image: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0px 7px 10px rgb(180, 178, 178);
+  }
+  50% {
+    background-image: linear-gradient(#ff79da, #ff79da, #9356dc);
+    box-shadow: 0px 7px 15px rgb(176, 176, 176);
+  }
+  100% {
+    background-image: linear-gradient(#ff79da, #ff79da);
+    box-shadow: 0px 7px 20px rgb(145, 145, 145);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -308,12 +326,13 @@ main .content {
   padding: 3%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 main .content .head {
   display: flex;
   width: 100%;
   gap: 5%;
-  padding: 3% 3% 0 3%;
+  padding: 3%;
   justify-content: space-between;
   align-items: center;
 }
@@ -342,6 +361,7 @@ main .content section {
   display: flex;
   flex-flow: column;
   animation: rise 3s;
+  padding: 5% 0;
 }
 main .content section span {
   border-bottom: #99e2d0 2px solid;
@@ -366,7 +386,7 @@ main .commander {
 @media (max-width: 950px) {
   html body main .content {
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   html body main .content .head {
     padding: 5% 5% 0 5%;
